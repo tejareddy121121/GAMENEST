@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elfinity- PlayZone - Static UI for a Music & Video Streaming Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/05c35565fb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="images/logo1.png">
+    <style>
+body {
+    overflow-x: hidden;
+}
+#backgroundImage {
+  background: url("images/bg-image.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 80vh;
+  object-fit: contain;
+}
+.css{
+    border-radius: 16px;
+}
+img{
+    object-fit: cover;
+}
+.gradient{
+    background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient_text{
+    background-image: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #a4e762 46%, #23b83e 59%, #13803d 71%, #163d20 84%, #271a24 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#backgroundImage1 {
+  background: url("images/tornament.jpeg") no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  object-fit: contain;
+  border-radius: 16px;
+}
+.card:hover, img:hover, button:hover, .btn:hover{
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="bg-dark">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand gradient" href="#"><img src="images/icon.png" alt="logo" width="32px" height="32px"> GAMENEST</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="navbarOffcanvasLgLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
+                            <li class="nav-item">
+                            <a class="nav-link" href="#Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#Game">Game</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#Streams">Streams</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#Tournaments">Tournaments</a>
+                            </li>
+                            <li class="nav-item">
+                            <button type="button" class="btn btn-primary mx-4">Login</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="backgroundImage" style="margin-top: 60px;"><br><br><br><br><br><br><br><br>
+            <div class="container" id="Home">
+                <h1 class="text-center gradient" style="margin-top: 30px;">Start playing <img src="images/logo.png" alt="logo" width="32px" height="32px"></h1>
+                <div class="container">
+                    <form class="d-flex text-center" role="search">
+                        <input class="form-control me-2 mx-5 bg-secondary border-secondary" id="Search" type="search" placeholder="Search games, streams or events " aria-label="Search"/>
+                        <button class="btn btn-primary mx-5 bg-secondary border-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="text-center m-5">
+                        <a href="#Start" class="btn btn-primary mx-4"> Start playing</a>
+                    </div>
+                    <div class="text-center m-5">
+                        <a href="#Join_eSports" class="btn btn-secondary">Join eSports</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark pb-3 pt-5">
+            <p class="text-white ps-3 fs-4 gradient" id="Game">Featured Games</p>
+            <p class="text-white ps-3 gradient_text">Discover the hottest games everyone's playing</p>
+        </div>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center gap-2">
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app.webp" class="card-img-top my-2" alt="app" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon (1).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title" id="Start"><q><b>Hopeless Battle-ground Fight</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.tw.shooting.simulation.strike.survival.land&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app1.webp" class="card-img-top my-2" alt="app1" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon (2).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title"><q><b>Free Fire MAX x NARUTO</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.dts.freefiremax&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app2.webp" class="card-img-top my-2" alt="app2" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon (3).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title"><q><b>Battlegrounds Mobile India</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.pubg.imobile&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app3.webp" class="card-img-top my-2" alt="app3" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon (4).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title"><q><b>Zombie Hunter: Offline Games</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=zombie.survival.dead.shooting&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center gap-2">
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app4.webp" class="card-img-top my-2" alt="app4" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon5 (3).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title mt-3" id="Join"><q><b>Chess</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.jetstartgames.chess&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app5.webp" class="card-img-top my-2" alt="app5" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon5 (1).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title"><q><b>Sudoku - Classic Sudoku Puzzle</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=easy.sudoku.puzzle.solver.free&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                        <img src="images/app6.webp" class="card-img-top my-2" alt="app6" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon5 (2).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                            <p class="card-title mt-3"><q><b>Ludo King®</b></q></p>
+                        </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.ludo.king&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app7.webp" class="card-img-top my-2" alt="app7" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon5 (4).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title mt-3"><q><b>Royal Match</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/search?q=royal+match&c=apps&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center gap-2">
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app8.webp" class="card-img-top my-2" alt="app8" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon6 (1).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title"><q><b>Asphalt 8 - Car Racing Game</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftA8HM&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app9.webp" class="card-img-top my-2" alt="app9" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon6 (2).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                                <p class="card-title"><q><b>Indian Bikes Driving 3D</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/search?q=Indian%20Bikes%20Driving%203D&c=apps&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                        <img src="images/app10.webp" class="card-img-top my-2" alt="app10" width="128px" height="128px">
+                            <div class="card-body d-flex gap-3">
+                                <img src="images/appicon6 (3).webp" alt="appicon" width="48px" height="48px" class="rounded-1">
+                            <p class="card-title mt-3"><q><b>Real Racing 3</b></q></p>
+                        </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/search?q=Real%20Racing%203&c=apps&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2" style="width: 16rem;">
+                            <img src="images/app11.webp" class="card-img-top my-2" alt="app11" width="128" height="128"> 
+                            <div class="card-body d-flex gap-3 align-items-center">
+                                <img src="images/appicon6 (4).webp" alt="appicon" width="48" height="48" class="rounded-1">
+                                <p class="card-title mb-0"><q><b>Hill Climb Racing</b></q></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+                                <a href="https://play.google.com/store/search?q=Hill%20Climb%20Racing&c=apps&hl=en_IN" class="btn btn-primary">Play</a>
+                                <p class="card-text mb-0">4.4 <i class="fa-solid fa-star text-warning"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div><br><br>        
+        <div class="bg-dark pb-3">
+            <p class="text-white ps-3 fs-4 gradient" id="Streams">Live Streams</p>
+            <p class="text-white ps-3 gradient_text">Watch the best gamers live right now</p>
+        </div>
+        <div class="container pb-5">
+            <div class="row justify-content-center gap-3">
+                <div class="card mx-2" style="width: 28rem; height: 5em;">
+                    <div class="card-body d-flex justify-content-between">
+                        <img src="images/Live Channel3.jpg" alt="appicon" width="58px" height="58px" class="rounded-circle">
+                        <div class="text-success">
+                            <p class="card-title"><q><b>Respect Gaming</b></q></p>
+                            <p>102K subscribers</p>
+                        </div>
+                        <div class="text-center">
+                            <a href="https://www.youtube.com/watch?v=p-UO8Zl77ds" class="btn btn-primary">View</a>
+                            <p>LIVE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2" style="width: 28rem; height: 5em;">
+                    <div class="card-body d-flex justify-content-between">
+                        <img src="images/Live Channel.jpg" alt="appicon" width="58px" height="58px" class="rounded-circle">
+                        <div class="text-success">
+                            <p class="card-title"><q><b>RN Gaming 94</b></q></p>
+                            <p>668K subscribers</p>
+                        </div>
+                        <div class="text-center">
+                            <a href="https://www.youtube.com/results?search_query=ff+live+streaming" class="btn btn-primary">View</a>
+                            <p>LIVE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2" style="width: 28rem; height: 5em;">
+                    <div class="card-body d-flex justify-content-between">
+                        <img src="images/Live Channel1.jpg" alt="appicon" width="58px" height="58px" class="rounded-circle">
+                        <div class="text-success">
+                            <p class="card-title"><q><b>GtxPreet</b></q></p>
+                            <p>2.09M subscribers</p>
+                        </div>
+                        <div class="text-center">
+                            <a href="https://www.youtube.com/watch?v=G4o-DqQIx4M" class="btn btn-primary">View</a>
+                            <p>LIVE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2" style="width: 28rem; height: 5em;">
+                    <div class="card-body d-flex  justify-content-between">
+                        <img src="images/Live Channel2.jpg" alt="appicon" width="58px" height="58px" class="rounded-circle">
+                        <div class="text-success">
+                            <p class="card-title"><q><b>XpertFusion</b></q></p>
+                            <p>24.9K subscribers</p>
+                        </div>
+                        <div class="text-center">
+                            <a href="https://www.youtube.com/watch?v=rLOjaElDpEA" class="btn btn-primary">View</a>
+                            <p>LIVE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark pb-3">
+            <p class="text-white ps-3 fs-4 gradient" id="Tournaments">Upcoming Tournaments</p>
+            <p class="text-white ps-3 gradient_text">Compete for glory and amazing prizes</p>
+        </div>
+        <div class="container py-4">
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-8">
+                    <div class="row column-gap-4 row-gap-4">
+                        <div class="card col-md-5 col-lg-5" style="height: 18em;">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="text-success">
+                                    <p class="card-title"><q><b>Global eSports Championship</b></q></p>
+                                    <p>Cyber Warfare 2077</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4>$50,000</h4>
+                                    <p>Prize Pool</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between px-4 gap-2 my-4">
+                                <button class="btn btn-primary" style="width: 120px; height: 55px;">256 <p>Players</p></button>
+                                <button class="btn btn-primary" style="width: 120px; height: 55px;">Dec 15-17 <p>Event Date</p></button>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=rLOjaElDpEA" class="btn btn-primary w-100">Register Now</a>
+                        </div>
+                        <div class="card col-md-5 col-lg-5" style="height: 18em;">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="text-success">
+                                    <p class="card-title"><q><b>Global eSports Championship</b></q></p>
+                                    <p>Cyber Warfare 2077</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4>$50,000</h4>
+                                    <p>Prize Pool</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between px-4 my-4 gap-2">
+                                <button class="btn btn-primary" style="width: 120px; height: 55px;">256 <p>Players</p></button>
+                                <button class="btn btn-primary" style="width: 120px; height: 55px;">Dec 15-17 <p>Event Date</p></button>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=rLOjaElDpEA" class="btn btn-primary w-100">Register Now</a>
+                        </div>
+                        <div class="card col-md-5 col-lg-5" style="height: 18em;">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="text-success">
+                                    <p class="card-title"><q><b>Mystic Realms World Cup</b></q></p>
+                                    <p>Mystic Realms</p>
+                                </div>
+                                <div class="text-center">
+                                    <h4>$25,000</h4>
+                                    <p>Prize Pool</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between px-4 my-4 gap-2">
+                                <button class="btn btn-primary" style="width: 120px; height: 55px;">256 <p>Players</p></button>
+                                <button class="btn btn-primary" style="width: 120px; height: 55px;">Dec 15-17 <p>Event Date</p></button>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=rLOjaElDpEA" class="btn btn-primary w-100">Register Now</a>
+                        </div>
+                            <div class="card col-md-5 col-lg-5" style="height: 18em;">
+                                <div class="card-body d-flex justify-content-between">
+                                    <div class="text-success">
+                                        <p class="card-title"><q><b>Mystic Realms World Cup</b></q></p>
+                                        <p>Mystic Realms</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <h4>$25,000</h4>
+                                        <p>Prize Pool</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between px-4 my-4 gap-2">
+                                    <button class="btn btn-primary" style="width: 120px; height: 55px;">256 <p>Players</p></button>
+                                    <button class="btn btn-primary" style="width: 120px; height: 55px;">Dec 15-17 <p>Event Date</p></button>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=rLOjaElDpEA" class="btn btn-primary w-100">Register Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img src="images/tornament.jpeg" alt="Event Image" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="text-white justify-content-between d-flex container">
+            <div>
+                <h4><img src="images/icon.png" alt="logo" width="32px" height="32px">GameNest</h4><br>
+                <p>The ultimate destination for gamers.</p>
+                <p>Discover, play, and compete in the world's</p>
+                <p>best games.</p>
+                <div class="d-flex gap-4">
+                    <div>
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-youtube"></i>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-message"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-github"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><b>Quick Links</b></p><br>
+                <p>Browse Games</p>
+                <p>Live Streams</p>
+                <p>Tournaments</p>
+                <p>Community</p>
+            </div>
+            <div>
+                <p><b>Support</b></p><br>
+                <p>Help Center</p>
+                <p>Contact Us</p>
+                <p>Bug Reports</p>
+                <p>Feature Requests</p>
+            </div>
+            <div>
+                <p><b>Legal</b></p><br>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+                <p>Cookie Policy</p>
+                <p>DMCA</p>
+            </div>            
+        </div>
+        <hr class="text-white">
+        <p class="text-white text-center">&copy; 2024 GameNest. All rights reserved. Built for gamers, by gamers.</p>
+    </div>    
+</body>
+</html>
